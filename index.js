@@ -8,18 +8,24 @@ function elevados () {
 
 //2.
 
-let foodList=['Pizza', 'Ramen', 'Paella', 'Entrecot'];
-let paises=['talia, Japon, Valencia']
+let foodList = ['Pizza', 'Ramen', 'Paella', 'Entrecot'];
 
-function(foodList, paises){
-
-    if( foodList == 'Entrecot'){
-        return 
+let result2 = foodList.map((food, i) => {
+    switch (i) {
+        case 0:
+            return `Como soy de Italia, amo comer ${food}`;
+            break;
+        case 1:
+            return `Como soy de Japón, amo comer ${food}`;
+            break;
+        case 2:
+            return `Como soy de Valencia, amo comer ${food}`;
+            break;
+        case 3:
+            return ` Aunque no como carne, el ${food} es sabroso`;
+            break;
     }
-
-
-}
-
+})
 
 //4
 const numbers2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -126,8 +132,8 @@ const books = [
     }
   ];
 
-  const total = books.filter(function filterCategory(x) {
-    if (x["category"] === 'code') {
+  const total = books.filter(function filterCategory(object) {
+    if (object["category"] === 'code') {
         return true;
     }
 })
